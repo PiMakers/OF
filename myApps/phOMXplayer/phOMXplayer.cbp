@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="phOMXplayer_linuxarmv7l" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="./" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="addons/;src/;build config/;" />
+		<MakeCommands>
+			<Build command="$make -f $makefile $target" />
+			<CompileFile command="$make -f $makefile $file" />
+			<Clean command="$make -f $makefile Clean$target" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="$make -q -f $makefile $target" />
+			<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/$(PROJECT_NAME)_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj/Debug/" />
+				<Option external_deps="../../openFrameworksM/libs/openFrameworksCompiled/lib/linux64/libopenFrameworksDebug.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<MakeCommands>
+					<Build command="$make -f $makefile $target" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile Clean$target" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj/Release/" />
+				<Option external_deps="../../openFrameworksM/libs/openFrameworksCompiled/lib/linux64/libopenFrameworks.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+			</Target>
+		</Build>
+		<ExtraCommands>
+			<Add before='[[ OF_APPNAME &lt;- IO.ExecuteAndGetOutputAndError(_T(&quot;make -n print-APPNAME&quot;),true); ]]' />
+			<Add before='[[ OF_APPNAME = OF_APPNAME.AfterLast( _T(&quot;=&quot;)); ]]' />
+			<Add before='[[ OF_APPNAME = OF_APPNAME.BeforeLast( _T(&quot;\n&quot;)); ]]' />
+			<Add before="[[ GetProjectManager().GetActiveProject().SetTitle( OF_APPNAME ); ]]" />
+		</ExtraCommands>
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/of3dPrimitives.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/of3dPrimitives.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/of3dUtils.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/of3dUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/ofCamera.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/ofCamera.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/ofEasyCam.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/ofEasyCam.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/ofMesh.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/ofNode.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/3d/ofNode.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppBaseWindow.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppEGLWindow.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppEGLWindow.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppGLFWWindow.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppGLFWWindow.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppGlutWindow.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppGlutWindow.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppNoWindow.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppNoWindow.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppRunner.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofAppRunner.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofBaseApp.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofBaseApp.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofIcon.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofMainLoop.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofMainLoop.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/app/ofWindowSettings.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/communication/ofArduino.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/communication/ofArduino.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/communication/ofSerial.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/communication/ofSerial.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/events/ofEvent.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/events/ofEventUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/events/ofEvents.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/events/ofEvents.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofBufferObject.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofBufferObject.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofFbo.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofFbo.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofGLBaseTypes.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofGLProgrammableRenderer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofGLProgrammableRenderer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofGLRenderer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofGLRenderer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofGLUtils.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofGLUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofLight.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofLight.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofMaterial.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofMaterial.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofShader.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofShader.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofTexture.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofTexture.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofVbo.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofVbo.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofVboMesh.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/gl/ofVboMesh.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/of3dGraphics.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/of3dGraphics.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofBitmapFont.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofBitmapFont.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofCairoRenderer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofCairoRenderer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofGraphics.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofGraphics.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofGraphicsBaseTypes.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofGraphicsBaseTypes.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofGraphicsConstants.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofImage.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofImage.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofPath.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofPath.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofPixels.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofPixels.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofPolyline.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofRendererCollection.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofRendererCollection.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofTessellator.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofTessellator.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofTrueTypeFont.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/graphics/ofTrueTypeFont.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofMath.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofMath.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofMathConstants.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofMatrix3x3.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofMatrix3x3.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofMatrix4x4.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofMatrix4x4.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofQuaternion.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofQuaternion.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofVec2f.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofVec2f.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofVec3f.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofVec4f.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofVec4f.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/math/ofVectorMath.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/ofMain.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofFmodSoundPlayer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofFmodSoundPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofOpenALSoundPlayer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofOpenALSoundPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofRtAudioSoundStream.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofRtAudioSoundStream.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundBaseTypes.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundBaseTypes.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundBuffer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundBuffer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundPlayer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundStream.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundStream.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/sound/ofSoundUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofBaseTypes.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofBaseTypes.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofColor.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofColor.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofParameter.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofParameter.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofParameterGroup.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofParameterGroup.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofPoint.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofRectangle.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofRectangle.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/types/ofTypes.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofConstants.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofFileUtils.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofFileUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofFpsCounter.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofFpsCounter.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofJson.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofLog.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofLog.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofMatrixStack.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofMatrixStack.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofNoise.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofSystemUtils.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofSystemUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofThread.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofThread.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofThreadChannel.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofTimer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofTimer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofURLFileLoader.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofURLFileLoader.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofUtils.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofXml.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/utils/ofXml.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofAVFoundationGrabber.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofAVFoundationPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofAVFoundationVideoPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofDirectShowGrabber.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofDirectShowGrabber.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofDirectShowPlayer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofDirectShowPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofGstUtils.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofGstUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofGstVideoGrabber.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofGstVideoGrabber.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofGstVideoPlayer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofGstVideoPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQTKitGrabber.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQTKitMovieRenderer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQTKitPlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQtUtils.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQtUtils.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQuickTimeGrabber.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQuickTimeGrabber.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQuickTimePlayer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofQuickTimePlayer.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofVideoBaseTypes.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofVideoGrabber.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofVideoGrabber.h" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofVideoPlayer.cpp" />
+		<Unit filename="../../openFrameworks/libs/openFrameworks/video/ofVideoPlayer.h" />
+		<Unit filename="Makefile">
+			<Option virtualFolder="build config/" />
+		</Unit>
+		<Unit filename="addons.make">
+			<Option virtualFolder="build config/" />
+		</Unit>
+		<Unit filename="config.make">
+			<Option virtualFolder="build config" />
+		</Unit>
+		<Unit filename="omxplayer/BitstreamConverter.cpp" />
+		<Unit filename="omxplayer/BitstreamConverter.h" />
+		<Unit filename="omxplayer/COPYING" />
+		<Unit filename="omxplayer/DllAvCodec.h" />
+		<Unit filename="omxplayer/DllAvFormat.h" />
+		<Unit filename="omxplayer/DllAvUtil.h" />
+		<Unit filename="omxplayer/DllBCM.h" />
+		<Unit filename="omxplayer/DllOMX.h" />
+		<Unit filename="omxplayer/DllSwResample.h" />
+		<Unit filename="omxplayer/DynamicDll.cpp" />
+		<Unit filename="omxplayer/DynamicDll.h" />
+		<Unit filename="omxplayer/File.cpp" />
+		<Unit filename="omxplayer/File.h" />
+		<Unit filename="omxplayer/KeyConfig.cpp" />
+		<Unit filename="omxplayer/KeyConfig.h" />
+		<Unit filename="omxplayer/Keyboard.cpp" />
+		<Unit filename="omxplayer/Keyboard.h" />
+		<Unit filename="omxplayer/Makefile" />
+		<Unit filename="omxplayer/Makefile.ffmpeg" />
+		<Unit filename="omxplayer/OMXAudio.cpp" />
+		<Unit filename="omxplayer/OMXAudio.h" />
+		<Unit filename="omxplayer/OMXAudioCodecOMX.cpp" />
+		<Unit filename="omxplayer/OMXAudioCodecOMX.h" />
+		<Unit filename="omxplayer/OMXClock.cpp" />
+		<Unit filename="omxplayer/OMXClock.h" />
+		<Unit filename="omxplayer/OMXControl.cpp" />
+		<Unit filename="omxplayer/OMXControl.h" />
+		<Unit filename="omxplayer/OMXCore.cpp" />
+		<Unit filename="omxplayer/OMXCore.h" />
+		<Unit filename="omxplayer/OMXOverlay.h" />
+		<Unit filename="omxplayer/OMXOverlayCodec.h" />
+		<Unit filename="omxplayer/OMXOverlayCodecText.cpp" />
+		<Unit filename="omxplayer/OMXOverlayCodecText.h" />
+		<Unit filename="omxplayer/OMXOverlayText.h" />
+		<Unit filename="omxplayer/OMXPlayerAudio.cpp" />
+		<Unit filename="omxplayer/OMXPlayerAudio.h" />
+		<Unit filename="omxplayer/OMXPlayerSubtitles.cpp" />
+		<Unit filename="omxplayer/OMXPlayerSubtitles.h" />
+		<Unit filename="omxplayer/OMXPlayerVideo.cpp" />
+		<Unit filename="omxplayer/OMXPlayerVideo.h" />
+		<Unit filename="omxplayer/OMXReader.cpp" />
+		<Unit filename="omxplayer/OMXReader.h" />
+		<Unit filename="omxplayer/OMXStreamInfo.cpp" />
+		<Unit filename="omxplayer/OMXStreamInfo.h" />
+		<Unit filename="omxplayer/OMXSubtitleTagSami.cpp" />
+		<Unit filename="omxplayer/OMXSubtitleTagSami.h" />
+		<Unit filename="omxplayer/OMXThread.cpp" />
+		<Unit filename="omxplayer/OMXThread.h" />
+		<Unit filename="omxplayer/OMXVideo.cpp" />
+		<Unit filename="omxplayer/OMXVideo.h" />
+		<Unit filename="omxplayer/RBP.h" />
+		<Unit filename="omxplayer/README.md" />
+		<Unit filename="omxplayer/Srt.cpp" />
+		<Unit filename="omxplayer/Srt.h" />
+		<Unit filename="omxplayer/Subtitle.h" />
+		<Unit filename="omxplayer/SubtitleRenderer.cpp" />
+		<Unit filename="omxplayer/SubtitleRenderer.h" />
+		<Unit filename="omxplayer/Unicode.cpp" />
+		<Unit filename="omxplayer/Unicode.h" />
+		<Unit filename="omxplayer/cores/IAudioCallback.h" />
+		<Unit filename="omxplayer/dbuscontrol.sh" />
+		<Unit filename="omxplayer/fonts/FreeSans.ttf" />
+		<Unit filename="omxplayer/fonts/FreeSansOblique.ttf" />
+		<Unit filename="omxplayer/gen_version.sh" />
+		<Unit filename="omxplayer/guilib/Geometry.h" />
+		<Unit filename="omxplayer/help.h" />
+		<Unit filename="omxplayer/keys.h" />
+		<Unit filename="omxplayer/linux/ConvUtils.h" />
+		<Unit filename="omxplayer/linux/OMXAlsa.cpp" />
+		<Unit filename="omxplayer/linux/OMXAlsa.h" />
+		<Unit filename="omxplayer/linux/PlatformDefs.h" />
+		<Unit filename="omxplayer/linux/PlatformInclude.h" />
+		<Unit filename="omxplayer/linux/RBP.cpp" />
+		<Unit filename="omxplayer/linux/RBP.h" />
+		<Unit filename="omxplayer/linux/XMemUtils.cpp" />
+		<Unit filename="omxplayer/linux/XMemUtils.d" />
+		<Unit filename="omxplayer/linux/XMemUtils.h" />
+		<Unit filename="omxplayer/linux/XSyncUtils.h" />
+		<Unit filename="omxplayer/linux/stat_utf8.h" />
+		<Unit filename="omxplayer/linux/stdio_utf8.h" />
+		<Unit filename="omxplayer/omxplayer" />
+		<Unit filename="omxplayer/omxplayer.cpp" />
+		<Unit filename="omxplayer/omxplayer.cppx" />
+		<Unit filename="omxplayer/prepare-native-raspbian.sh" />
+		<Unit filename="omxplayer/profiler.sh" />
+		<Unit filename="omxplayer/system.h" />
+		<Unit filename="omxplayer/utils/Clamp.h" />
+		<Unit filename="omxplayer/utils/Enforce.h" />
+		<Unit filename="omxplayer/utils/FunctorVisitor.h" />
+		<Unit filename="omxplayer/utils/LockBlock.h" />
+		<Unit filename="omxplayer/utils/Mailbox.h" />
+		<Unit filename="omxplayer/utils/MathUtils.h" />
+		<Unit filename="omxplayer/utils/PCMRemap.cpp" />
+		<Unit filename="omxplayer/utils/PCMRemap.h" />
+		<Unit filename="omxplayer/utils/RegExp.cpp" />
+		<Unit filename="omxplayer/utils/RegExp.h" />
+		<Unit filename="omxplayer/utils/ScopeExit.h" />
+		<Unit filename="omxplayer/utils/SingleLock.h" />
+		<Unit filename="omxplayer/utils/StdString.h" />
+		<Unit filename="omxplayer/utils/Strprintf.h" />
+		<Unit filename="omxplayer/utils/log.cpp" />
+		<Unit filename="omxplayer/utils/log.h" />
+		<Unit filename="omxplayer/utils/traits.hpp" />
+		<Unit filename="omxplayer/utils/variant-impl.hpp" />
+		<Unit filename="omxplayer/utils/variant.hpp" />
+		<Unit filename="omxplayer/version.h" />
+		<Unit filename="src/main.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/ofApp.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/ofApp.cpp.omxplayerSync">
+			<Option virtualFolder="src" />
+		</Unit>
+		<Unit filename="src/ofApp.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/omxplayerOrig.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/omxplayerOrig.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/phomxPlayerUtis.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/phomxPlayerUtis.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/rpiUtils.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/rpiUtils.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
