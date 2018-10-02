@@ -6,22 +6,23 @@
 
 # MAKEFILE_DEBUG=1
 
-#RPI = 3
-RPI = 1 # RPI=3
+RPI = 3
+# RPI = 1 # RPI=3
 
 ifdef RPI
-ifeq ($(RPI),3)
-PLATFORM_ARCH=armv7l
-else
-IS_RASPBIAN=1
-endif
-
 GST_VERSION=1.0
 
 TOOLCHAIN_ROOT=/mnt/LinuxData/Scripts/CrossRpi/rpi_toolchain-gcc6
 RPI_ROOT=/opt/PiTopDevRootfs
-#RPI_ROOT=/opt/Rpi0Rootfs
-RPI_ROOT=/opt/Rpi3DevRootfs
+RPI_ROOT=/opt/Rpi0Rootfs
+#RPI_ROOT=/opt/Rpi3DevRootfs
+$(info RPI=$(RPI))
+
+ifeq ($(RPI),3)
+PLATFORM_ARCH=armv7l
+elif
+IS_RASPBIAN=1
+endif
 endif
 
 OS_RELEASE=$(shell cat $(RPI_ROOT)/etc/os-release | grep VERSION_ID= | sed "s/VERSION_ID\=\"\(.*\)\"/\1/" )
